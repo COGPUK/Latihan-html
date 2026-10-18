@@ -1,60 +1,98 @@
-<!DOCTYPE html>
-<html lang="id">
+<!doctype html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Profil mahasiswa D4 Teknologi Rekayasa Internet PENS.">
-    <title>Ahmad Riki Afiqoh Rasyad - Profil Mahasiswa</title>
-    <link rel="stylesheet" href="./index.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web Design</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+  <header class="topbar">
+    <nav class="nav container" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda">Fiq.</a>
+      <div class="nav-links">
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak">Kontak</a>
+      </div>
+      <input class="theme-toggle-input" type="checkbox" id="themeToggle" aria-label="Aktifkan mode terang">
+      <label class="theme-toggle" for="themeToggle" aria-hidden="true"></label>
+    </nav>
+  </header>
 
-    <header class="header-situs">
-        <nav class="navbar" aria-label="Navigasi utama">
-            <a href="#beranda">HOME</a>
-            <a href="#tentang">ABOUT ME</a>
-            <a href="#kontak">CONTACT ME</a>
-        </nav>
-    </header>
+  <main id="konten" class="container">
+    <section class="hero" id="beranda" aria-labelledby="hero-title">
+      <div class="terminal">
+        <div class="terminal-bar" aria-hidden="true">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          <span class="terminal-title">fiq@archiso — bash</span>
+        </div>
+        <div class="terminal-body">
+          <div><span class="prompt">fiq@archiso:~$</span> sudo </div>
+          <p class="eyebrow">MAHASISWA · PEMBELAJAR · TECH ENTHUSIAST</p>
+          <h1 id="hero-title"><span class="name">FIQ</span>.</h1>
+          <p class="lead"></p>
+          <div class="hero-actions">
+            <a class="button primary" href="#tentang">tentang</a>
+            <a class="button" href="#kontak">Kontak</a>
+          </div>
+          <p class="muted" style="margin:1.6rem 0 0"><span class="prompt">status:</span> sedang belajar dan membangun proyek satu per satu.</p>
+        </div>
+      </div>
+    </section>
 
-    <main>
+    <section id="tentang" aria-labelledby="tentang-title">
+      <div class="section-heading">
+        <h2 id="tentang-title"><span class="prompt">01.</span> Tentang Saya</h2>
+        <p>cat ./about.txt</p>
+      </div>
+      <article class="content-card">
+        <h3>Profil singkat</h3>
+        <p>Mahasiswa Teknik Rekayasa Internet yang sedang mempelajari jaringan komputer, Linux, dan pemrograman. Website ini menjadi tempat untuk memperkenalkan diri, mendokumentasikan proses belajar, serta membagikan catatan teknis.</p>
+        <p class="muted">Prinsip belajar: pahami konsepnya, praktikkan, dokumentasikan, lalu evaluasi.</p>
+      </article>
+    </section>
 
-        <section class="hero" id="beranda">
+    <section id="minat" aria-labelledby="minat-title">
+      <div class="section-heading">
+        <h2 id="minat-title"><span class="prompt">02.</span> Bidang yang Saya Pelajari</h2>
+        <p>cat ~/learning-path.txt</p>
+      </div>
+      <article class="content-card">
+        <h3>Fokus belajar</h3>
+        <p><strong>Linux & administrasi sistem.</strong> Memahami struktur direktori, permission, paket perangkat lunak, proses, layanan, dan konfigurasi desktop.</p>
+        <p><strong>Jaringan komputer.</strong> Mempelajari model TCP/IP, IPv4, subnetting, DNS, DHCP, routing, switching, serta dasar pemecahan masalah konektivitas.</p>
+        <p><strong>Pemrograman.</strong> Melatih logika dan pemecahan masalah menggunakan C, kemudian menerapkannya pada proyek kecil.</p>
+        <p><strong>Web development.</strong> Membangun halaman web yang semantik, mudah dibaca, responsif, dan mudah dirawat dengan HTML serta CSS.</p>
+        <div class="tag-list" aria-label="Topik yang dipelajari">
+          <span class="tag">Linux</span><span class="tag">Networking</span><span class="tag">C</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Troubleshooting</span>
+        </div>
+      </article>
+    </section>
 
-            <div class="hero-teks">
-                <p class="kicker">
-                    <span class="kicker-garis"></span>
-                    <span>STUDENT OF ELECTRONIC ENGINEERING - EEPIS</span>
-                </p>
+    <section id="kontak" aria-labelledby="kontak-title">
+      <div class="section-heading">
+        <h2 id="kontak-title"><span class="prompt">03.</span> Kontak</h2>
+        <p>cat ./contact.txt</p>
+      </div>
+      <div class="content-card">
+        <h3>Terhubung dengan saya</h3>
+        <p>Untuk diskusi seputar Linux, jaringan komputer, pemrograman, atau kolaborasi proyek, silakan hubungi saya melalui kanal yang nantinya dicantumkan di bawah ini.</p>
+        <ul class="contact-list">
+          <li><span class="prompt">email:</span> <span class="muted">tambahkan-alamat-email-anda</span></li>
+          <li><span class="prompt">github:</span> <span class="muted">tambahkan-tautan-profil-github</span></li>
+          <li><span class="prompt">lokasi:</span> Indonesia</li>
+        </ul>
+        <p class="muted">Catatan: ganti teks contoh dengan informasi publik yang ingin Anda bagikan sebelum website dipublikasikan.</p>
+      </div>
+    </section>
+  </main>
 
-                <h1>AHMAD RIKI<br>AFIQOH RASYAD</h1>
-
-                <div class="grup-tombol">
-                    <a href="#tentang" class="btn btn-utama">VIEW WORK</a>
-                    <a href="#tentang" class="btn btn-garis">ABOUT ME</a>
-                </div>
-            </div>
-
-            <figure class="hero-foto">
-                <img src="gambar_1.jpeg" alt="Foto Ahmad Riki Afiqoh Rasyad">
-            </figure>
-
-        </section>
-
-        <section class="tentang" id="tentang">
-            <h2>Tentang Saya</h2>
-            <p>
-                Saya Ahmad Riki Afiqoh Rasyad, mahasiswa D4 Teknologi Rekayasa Internet,
-                Departemen Teknik Elektro, Politeknik Elektronika Negeri Surabaya.
-            
-            </p>
-        </section>
-
-    </main>
-
-    <footer class="footer-situs" id="kontak">
-        <p>&copy; Ahmad Riki Afiqoh Rasyad</p>
-    </footer>
+  <footer>
+    <div class="container">
+      <span>fiq@archiso:~$ exit</span>
+      <span>© 2026 FIQ · dibuat dengan HTML & CSS</span>
+    </div>
+  </footer>
 
 </body>
 </html>
